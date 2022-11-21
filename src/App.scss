@@ -1,0 +1,263 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+.body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+    &__item{
+      width: 80%;
+      height: 100%;
+      padding-right: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      margin: 5px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+        margin: 0;padding: 0;
+        button{
+          border: 1px solid grey;
+          cursor: pointer;
+          border-radius: 2px;
+          padding: 5px;
+          box-shadow: 10px 10px 10px grey;
+        }button:hover{
+          transform: scale(1.1);
+        }
+      }
+      &__border:nth-child(1){
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 20px;
+      }
+      &__border:nth-child(2){
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+      &__tags{
+        display: flex;
+        align-items: flex-end;
+        padding: 5px;
+        justify-content: flex-end;
+        .editTagbtn{
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        p{
+          margin-left: 20px;
+        }
+        button{
+          height: 50%;
+          border: 0;
+          padding: 5px;
+          cursor: pointer;
+        }
+        button:hover{
+          transform: scale(1.05);
+        }
+        .deleteTag{
+          border: 1px solid black;
+        }
+      }
+
+      &__tags button{
+        margin-left: 10px;
+      }
+    }
+}
+.modal__bga{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  .modola{
+    background: red;
+  }
+  form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 2px;
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+}
+
+.modal__bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: rgba(110, 110, 110, 0.45);
+  &__sure{
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    background-color: rgba(110, 110, 110, 0.2);
+    &__modal{
+      width: 200px;
+      height: 200px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-shadow: 5px 5px 5px black;
+      position: absolute;
+    }
+  }
+  .modal{
+    width: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 5px black;
+    position: absolute;
+    p{
+      color: red;
+    }
+    .Createbtn{
+      margin-bottom: 20px;
+    }
+    .Deletebtn{
+      margin-top: 20px;
+      margin-bottom: 0;
+      width: 100%;
+      height: 40px;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      border-bottom: 0;
+      font-size: 1.3rem;
+      border-radius: 55px 55px 0px 0px;
+      cursor: pointer;
+    }.Deletebtn:hover{
+      transform: scale(1.1);
+      height: 35px;
+    }
+    img{
+      width: 50px;
+      height: 50px;
+    }
+    form{
+      width: 100%;
+      height: 100%;
+      h2{
+        padding: 5px;
+      }
+      input{
+        margin-top: 5px;
+        box-shadow: 2px 2px 2px black,
+                   -2px -2px 2px black;
+        border: 0;
+        padding: 5px;
+      }
+      button{
+        margin-top: 20px;
+        width: 100px;
+        border: 0px solid black;
+        color: black;
+        background-color: white;
+        box-shadow: 2px 2px 2px black,
+                   -2px -2px 2px black;
+        cursor: pointer;
+      }
+      button:hover{
+        transform: scale(1.1);
+      }
+    }
+    button:nth-child(1):hover{
+      transform: scale(1.1);
+    }
+    button:nth-child(1){
+      right: 2px;
+      top: 2px;
+      position: absolute;
+      padding: 5;
+      border: 0;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+    }
+  }
+}
+.NewNote{
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  margin: 10px;
+}
+.NoteFind{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.title h1{
+  font-size: 50px;
+}
+
+.input__wrapper{
+  form{
+    input{
+      padding: 5px 10px 5px 10px;
+      width: 200px;
+      border: 1px solid grey;
+      box-shadow: 5px 5px 5px grey;
+
+    }
+  }
+}
+.NewNote__button{
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+}
+.NewNote__button:hover{
+  transform: scale(1.1);
+}
+
+
+
